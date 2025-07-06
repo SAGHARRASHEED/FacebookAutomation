@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Messaging Automation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<body>
+    <div class="container">
+        <h1>Facebook Messaging Automation</h1>
+        <button id="themeToggle" onclick="toggleTheme()">Toggle Theme</button>
+        <div class="profile-section">
+            <img id="profilePic" src="https://via.placeholder.com/60" alt="Profile Picture">
+            <span id="profileName">Not logged in</span>
+        </div>
+        <button id="loginBtn" onclick="loginFacebook()">Login to Facebook</button>
+        <div>
+            <label for="profileSelect">Select Public Profile:</label>
+            <select id="profileSelect">
+                <option value="">Select a profile</option>
+            </select>
+        </div>
+        <div>
+            <label for="message">Message to Send:</label>
+            <textarea id="message" rows="5" placeholder="Enter your message here"></textarea>
+        </div>
+        <div>
+            <label for="sheetLink">Google Sheet Link (with Profile Links and Client Names):</label>
+            <input type="text" id="sheetLink" placeholder="Enter Google Sheet URL">
+        </div>
+        <div>
+            <button id="startBtn" onclick="startAutomation()">Start Sending Messages</button>
+            <button id="stopBtn" onclick="stopAutomation()">Stop Sending Messages</button>
+        </div>
+        <div class="status" id="status">Status: Ready</div>
+        <table id="clientTable">
+            <thead>
+                <tr>
+                    <th>Client Name</th>
+                    <th>Profile Link</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="clientTableBody"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
